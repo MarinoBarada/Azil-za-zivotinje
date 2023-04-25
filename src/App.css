@@ -1,7 +1,14 @@
-#root {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  font-size: 1.6rem;
+  height: 100%;
 }
