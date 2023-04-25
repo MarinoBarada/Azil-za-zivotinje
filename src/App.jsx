@@ -5,18 +5,26 @@ import AnimalList from "./pages/AnimalList";
 import Donations from "./pages/Donations";
 import AddEditAnimal from "./pages/AddEditAnimal";
 import { Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import { useState } from "react";
 
 function App() {
+  const [user, setUser] = useState(false);
+
+  const userChange = (event) => {
+    setUser(event.target.checked);
+  };
+
   return (
     <>
-      <h1>App</h1>
+      <Navbar checked={user} action={userChange}/>
       <div className="wrapper">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/zivotinje" element={<AnimalList />} />
           <Route path="/donacije" element={<Donations />} />
           <Route path="/obavijesti" element={<Notifications />} />
-          <Route path="/unosZivotinja" element={<AddEditAnimal />} />
+          {user && <Route path="/unosZivotinja" element={<AddEditAnimal />} />}
         </Routes>
       </div>
     </>
