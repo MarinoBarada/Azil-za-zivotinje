@@ -95,3 +95,106 @@
 .toggle input:checked + .slider::before {
     transform: translateX(calc(var(--width) - var(--height)));
 }
+
+nav.mobile-nav, .mobile-menu-container {
+    display: none;
+}
+
+@media screen and (max-width: 1290px){
+    .wrapper {
+        width: 100%;
+        margin: 0;
+        padding: 1em 3em;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    nav {
+        display: none;
+    }
+
+    nav.mobile-nav {
+        display: flex;
+        background-color: #333;
+        color: white;
+    }
+
+    .wrapper {
+        padding: 1em 2em;
+        width: 100%;
+        align-items: center;
+    }
+
+    .site-title {
+        text-decoration: none;
+        color: white;
+    }
+
+    .mobile-menu-container {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 100%;
+        background: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 200;
+        transition: all 400ms ease;
+        color: white;
+    }
+
+    .mobile-menu-container.active {
+        left: 0%;
+    }
+
+    .mobile-menu-container .close-icon{
+        position: fixed;
+        top: 20px;
+        right: 45px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 400ms ease;
+    }
+
+    .mobile-menu-container.active .close-icon{
+        opacity: 300;
+        pointer-events: auto;
+        cursor: pointer;
+    }
+
+     .mobile-menu-container ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        justify-content: stretch;
+        align-items: center;
+        font-size: 3rem;
+        width: 100%;
+    }
+
+    .mobile-menu-container li.active {
+        background-color: #555;
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobile-menu-container p {
+        margin: 0;
+    }
+
+    .mobile-menu-container li:hover{
+        background-color: #777;
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobile-menu-container ul li a {
+        color: white;
+        text-decoration: none;
+        transition: all 400ms ease;
+    }
+  }
