@@ -26,7 +26,7 @@ function Navbar({ checked, action }) {
             <CustomLink to="/donacije" style={style}>Donacije</CustomLink>
             <CustomLink to="/obavijesti" style={style}>Obavijesti</CustomLink>
             {checked && (
-              <CustomLink to="/unosZivotinja">Unos životinja</CustomLink>
+              <CustomLink to="/unosZivotinja" style={style}>Unos životinja</CustomLink>
             )}
             <label className={style["toggle"]}>
               <input
@@ -63,7 +63,7 @@ function Navbar({ checked, action }) {
           <CustomLink to="/donacije" style={style} onClick={handleClick}>Donacije</CustomLink>
           <CustomLink to="/obavijesti" style={style} onClick={handleClick}>Obavijesti</CustomLink>
           {checked && (
-            <CustomLink to="/unosZivotinja" onClick={handleClick}>Unos životinja</CustomLink>
+            <CustomLink to="/unosZivotinja" style={style} onClick={handleClick}>Unos životinja</CustomLink>
           )}
           <label className={style["toggle"]}>
             <input
