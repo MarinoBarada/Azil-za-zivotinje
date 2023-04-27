@@ -7,6 +7,7 @@ import AddEditAnimal from "./pages/AddEditAnimal";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import { useState } from "react";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [user, setUser] = useState(false);
@@ -27,6 +28,7 @@ function App() {
           {user && <Route path="/unosZivotinja" element={<AddEditAnimal />} />}
         </Routes>
       </div>
+      <Footer checked={user}/>
     </>
   );
 }

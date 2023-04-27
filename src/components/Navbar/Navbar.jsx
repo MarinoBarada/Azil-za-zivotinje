@@ -1,9 +1,10 @@
 import React from "react";
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { Link } from "react-router-dom";
 import style from "./Navbar.module.css";
 import MenuIcon from "../../icons/MenuAlt4.svg"
 import CloseIcon from "../../icons/close.svg"
 import { useState } from "react";
+import CustomLink from "../CustomLink/CustomLink";
 
 
 function Navbar({ checked, action }) {
@@ -20,10 +21,10 @@ function Navbar({ checked, action }) {
             AzilSplit
           </Link>
           <ul>
-            <CustomLink to="/">O nama</CustomLink>
-            <CustomLink to="/zivotinje">Životinje</CustomLink>
-            <CustomLink to="/donacije">Donacije</CustomLink>
-            <CustomLink to="/obavijesti">Obavijesti</CustomLink>
+            <CustomLink to="/" style={style}>O nama</CustomLink>
+            <CustomLink to="/zivotinje" style={style}>Životinje</CustomLink>
+            <CustomLink to="/donacije" style={style}>Donacije</CustomLink>
+            <CustomLink to="/obavijesti" style={style}>Obavijesti</CustomLink>
             {checked && (
               <CustomLink to="/unosZivotinja">Unos životinja</CustomLink>
             )}
@@ -57,10 +58,10 @@ function Navbar({ checked, action }) {
           <img src={CloseIcon} alt="" onClick={handleClick}/>
         </div>
         <ul>
-          <CustomLink to="/" onClick={handleClick}>O nama</CustomLink>
-          <CustomLink to="/zivotinje" onClick={handleClick}>Životinje</CustomLink>
-          <CustomLink to="/donacije" onClick={handleClick}>Donacije</CustomLink>
-          <CustomLink to="/obavijesti" onClick={handleClick}>Obavijesti</CustomLink>
+          <CustomLink to="/" style={style} onClick={handleClick}>O nama</CustomLink>
+          <CustomLink to="/zivotinje" style={style} onClick={handleClick}>Životinje</CustomLink>
+          <CustomLink to="/donacije" style={style} onClick={handleClick}>Donacije</CustomLink>
+          <CustomLink to="/obavijesti" style={style} onClick={handleClick}>Obavijesti</CustomLink>
           {checked && (
             <CustomLink to="/unosZivotinja" onClick={handleClick}>Unos životinja</CustomLink>
           )}
@@ -77,19 +78,6 @@ function Navbar({ checked, action }) {
         </ul>
       </div>
     </>
-  );
-}
-
-function CustomLink({ to, children, ...props }) {
-  const resolvedPath = useResolvedPath(to);
-  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
-
-  return (
-    <li className={isActive ? style["active"] : ""}>
-      <Link to={to} {...props}>
-        {children}
-      </Link>
-    </li>
   );
 }
 
