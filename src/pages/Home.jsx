@@ -1,9 +1,10 @@
 import React from "react";
+import AboutUs from "../components/AboutUs/AboutUs";
 
 function Home() {
   return (
     <>
-      <h1>Home</h1>
+      <AboutUs/>
     </>
   );
 }
