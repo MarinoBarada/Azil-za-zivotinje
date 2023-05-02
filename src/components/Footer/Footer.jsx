@@ -1,10 +1,13 @@
 import React from "react";
+import { useContext } from "react";
 import style from "./Footer.module.css";
 import CustomLink from "../CustomLink/CustomLink";
 import SocialIcons from "../SocialIcons/SocialIcons";
+import userTypeContext from "../../context/userTypeContext";
 
 
-function Footer({ checked }) {
+function Footer() {
+  const checked = useContext(userTypeContext);
   return (
     <footer className={style["footer"]}>
       <div className={style["wrapper"]}>

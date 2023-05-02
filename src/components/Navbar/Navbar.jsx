@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import style from "./Navbar.module.css";
 import MenuIcon from "../../icons/MenuAlt4.svg"
 import CloseIcon from "../../icons/close.svg"
-import { useState } from "react";
+import { useState, useContext } from "react";
 import CustomLink from "../CustomLink/CustomLink";
+import userTypeContext from "../../context/userTypeContext";
 
-
-function Navbar({ checked, action }) {
+function Navbar({ action }) {
   const [active, setActive] = useState(false);
+  const checked = useContext(userTypeContext);
 
   const handleClick = () => {
     setActive(!active);
