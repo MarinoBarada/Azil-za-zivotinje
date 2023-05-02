@@ -9,6 +9,12 @@ import Navbar from "./components/Navbar/Navbar";
 import { useState, useContext } from "react";
 import Footer from "./components/Footer/Footer";
 import userTypeContext from "./context/userTypeContext";
+import axios from "axios";
+
+axios.defaults.baseURL = "http://localhost:3001";
+axios.defaults.headers = {
+  "content-type": "application/json",
+};
 
 function App() {
   const [user, setUser] = useState(false);
