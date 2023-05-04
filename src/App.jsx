@@ -10,6 +10,7 @@ import { useState, useContext } from "react";
 import Footer from "./components/Footer/Footer";
 import userTypeContext from "./context/userTypeContext";
 import axios from "axios";
+import AddNotification from "./pages/AddNotification/AddNotification";
 
 axios.defaults.baseURL = "http://localhost:3001";
 axios.defaults.headers = {
@@ -33,6 +34,7 @@ function App() {
             <Route path="/zivotinje" element={<AnimalList />} />
             <Route path="/donacije" element={<Donations />} />
             <Route path="/obavijesti" element={<Notifications />} />
+            <Route path="/obavijesti/unosObavijesti" element={<AddNotification />} />
             {user && (
               <Route path="/unosZivotinja" element={<AddEditAnimal />} />
             )}
