@@ -12,7 +12,8 @@
       "naslov": "Međunarodni dan mačaka",
       "datum": "2023-02-17",
       "tekst": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus mauris metus, vulputate vulputate neque blandit quis. Nunc ultrices diam ligula, nec commodo purus ullamcorper id. Donec aliquet libero eu tincidunt eleifend. Duis ornare tincidunt nisl quis fringilla. Curabitur bibendum metus mauris, in bibendum lectus vestibulum tristique. Sed in nibh facilisis tortor varius euismod at et lectus. In non congue elit. Donec blandit est consequat, porta tellus eu, placerat odio.",
-      "vazno": false
+      "vazno": false,
+      "kategorija": "donirano"
     },
     {
       "naslov": "Svečana dodjela",
@@ -32,14 +33,14 @@
   "donacije": [
     {
       "id": 1,
-      "kategorija": "donirano",
+      "kategorija": "trazi",
       "tip": "Hrana",
       "vrijednost": 25,
       "opis": "Suha hrana za pse - 10kg"
     },
     {
       "id": 2,
-      "kategorija": "trazi",
+      "kategorija": "donirano",
       "tip": "Igračke",
       "vrijednost": 15,
       "opis": "Grebalica za mačke"
@@ -50,6 +51,13 @@
       "tip": "Ostalo",
       "vrijednost": 25,
       "opis": "Kavez za srednje papige"
+    },
+    {
+      "tip": "igracke",
+      "kategorija": "trazi",
+      "vrijednost": "7",
+      "opis": "Mali miševi na baterije",
+      "id": 4
     }
   ],
   "zivotinje": [

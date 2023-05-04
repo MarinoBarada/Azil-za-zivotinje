@@ -1,0 +1,63 @@
+.donation-form {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 96px);
+    justify-content: center;
+    align-items: center;
+    gap:1em;
+}
+
+.donation-form h1 {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.donation-form h1::after{
+    content: "";
+    width: 3em;
+    background-color: #333;
+    height: 0.1em;
+    position: relative;
+    display: block;
+    top: 0.1em;
+    left: calc(50% - 1.5em);
+}
+
+.donation-form span{
+    color: red;
+    align-self: start;
+    padding-left: 10%;
+    font-size: 2rem;
+}
+
+.donation-form input{
+    width: 80%;
+    font-size: 2rem;
+    padding: 0.4em;
+}
+.donation-form select{
+    width: 80%;
+    font-size: 2rem;
+    padding: 0.4em;
+}
+
+.donation-form textarea{
+    width: 80%;
+    font-size: 2rem;
+    padding: 0.4em;
+    resize: none;
+}
+
+.donation-form button{
+    width: 80%;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 0.8em;
+    color: white;
+    background-color: #333;
+}
+
+.donation-form button:hover{
+    background-color: #555;
+}
