@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import Notifications from "./pages/Notifications";
 import AnimalList from "./pages/AnimalList";
 import Donations from "./pages/Donations/Donations";
-import AddEditAnimal from "./pages/AddEditAnimal";
+import AddEditAnimal from "./pages/AddEditAnimal/AddEditAnimal";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import { useState, useContext } from "react";

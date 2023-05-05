@@ -1,0 +1,21 @@
+.radio{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.3em;
+    margin-top: 0.3em;
+    font-size: 2rem;
+}
+
+.radio input{
+    font-size: 1.8rem;
+    width: 1.2em;
+    height: 1.2em;
+  
+    border-radius: 50%;
+  
+    border: 0.2em solid #999;
+    transition: 0.2s all linear;
+    margin: 0;
+    position: relative;
+}

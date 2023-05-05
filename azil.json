@@ -65,6 +65,7 @@
       "id": 1,
       "ime": "Garfield",
       "vrsta": "mačka",
+      "slika": "https://cdn.agroklub.com/upload/images/text/thumb/mackenzi-1-880x495.jpg",
       "cip": false,
       "godine": 44,
       "opis": "Voli lazanje",
@@ -75,11 +76,78 @@
       "id": 2,
       "ime": "Snoopy",
       "vrsta": "pas",
+      "slika": "https://www.zoocity.hr/media/blog/cache/800x_0/magefan_blog/Zapadnos_kotski_bijeli_terijer.jpg",
       "cip": true,
       "godine": 50,
       "opis": "Više od običnog psa",
       "pregled": "2000-02-13",
       "udomljen": false
+    },
+    {
+      "godine": "21",
+      "opis": "Žućo je umiljata beba od 50 kg",
+      "cip": true,
+      "vrsta": "pas",
+      "udomljen": false,
+      "ime": "Žućo",
+      "pregled": "2023-04-22",
+      "slika": "https://ip.index.hr/remote/bucket.index.hr/b/index/0c3a7624-3b27-444a-8b46-4d36418fa9c7.png?width=480&height=480",
+      "id": 3
+    },
+    {
+      "godine": "7",
+      "opis": "Rex vas neće drukati za drogu ne brinite",
+      "cip": true,
+      "vrsta": "pas",
+      "udomljen": false,
+      "ime": "Rex",
+      "pregled": "2023-04-30",
+      "slika": "https://zoona.hr/wp-content/uploads/2019/12/99111300_s-1.jpg",
+      "id": 4
+    },
+    {
+      "godine": "7",
+      "opis": "Mimi voli da grebe.",
+      "cip": false,
+      "vrsta": "mačka",
+      "udomljen": false,
+      "ime": "Mimi",
+      "pregled": "2023-02-09",
+      "slika": "https://www.purina.hr/sites/default/files/2017-11/feed_your_senior_cat.jpg",
+      "id": 5
+    },
+    {
+      "godine": "6",
+      "opis": "Mekana , slatka ali blago nadrkana.",
+      "cip": true,
+      "vrsta": "mačka",
+      "udomljen": false,
+      "ime": "Perina",
+      "pregled": "2022-06-15",
+      "slika": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpoBeKqby9XC1oFpU-8MMBxLyAtDeN1OUS_A&usqp=CAU",
+      "id": 6
+    },
+    {
+      "godine": "120",
+      "opis": "Spor i u cvijetu mladosti.",
+      "cip": false,
+      "vrsta": "ostalo",
+      "udomljen": false,
+      "ime": "Krešo",
+      "pregled": "2017-12-07",
+      "slika": "https://zoo.hr/wp-content/uploads/2019/10/%C4%8Dan%C4%8Dara-Testudo-hermanni-1620x1080-1620x1080.jpg",
+      "id": 7
+    },
+    {
+      "godine": "50",
+      "opis": "Voli duge šetnje uz more.",
+      "cip": false,
+      "vrsta": "ostalo",
+      "udomljen": false,
+      "ime": "Rafael",
+      "pregled": "2023-02-16",
+      "slika": "https://d19p4plxg0u3gz.cloudfront.net/3f590ef2-8f1b-11ec-a4fd-0242ac120021/original.jpeg",
+      "id": 8
     }
   ]
 }

@@ -7,7 +7,7 @@ import { useContext } from "react";
 import userTypeContext from "../../context/userTypeContext";
 
 function AddDonation() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const admin = useContext(userTypeContext);
   const {
     register,
