@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import style from "./AddDonation.module.css";
+import style from "../../style/Form.module.css";
 import * as azilDataAPI from "../../api/azilData";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
@@ -24,32 +24,50 @@ function AddDonation() {
     };
     await azilDataAPI.createDonation(toSend);
 
-    window.alert("Uspješno ste unjeli novu donaciju");
+    window.alert("Uspješno ste unjeli novu donaciju.");
     navigate("/donacije");
   };
 
   return (
     <>
-      <form
-        className={style["donation-form"]}
-        onSubmit={handleSubmit(onSubmit)}
-      >
+      <form className={style["form"]} onSubmit={handleSubmit(onSubmit)}>
         <h1>Unos Donacije</h1>
-        <select
-          {...register("tip", {
-            required: true,
-          })}
-        >
-          <option value="">--Izaber Tip--</option>
-          <option value="hrana">Hrana</option>
-          <option value="lijekovi">Lijekovi</option>
-          <option value="igracke">Igračke</option>
-          <option value="vet-troskovi">Vet. troškovi</option>
-        </select>
-        {errors.tip?.type === "required" && <span>Tip je obavezan.</span>}
-        <input type="number" min={1} {...register("vrijednost")} />
-        <textarea rows={5} cols={30} placeholder="Opis" {...register("opis")} />
-        <button type="submite">Spremi</button>
+        <div className={style["container-input"]}>
+          <p>Tip:</p>
+          <select
+            {...register("tip", {
+              required: true,
+            })}
+          >
+            <option value="">--Izaber Tip--</option>
+            <option value="Hrana">Hrana</option>
+            <option value="Lijekovi">Lijekovi</option>
+            <option value="Igracke">Igračke</option>
+            <option value="Vet-troskovi">Vet. troškovi</option>
+            <option value="Ostalo">Ostalo</option>
+          </select>
+          {errors.tip?.type === "required" ? (
+            <span>Tip je obvezan.</span>
+          ) : (
+            <span>&nbsp;</span>
+          )}
+        </div>
+        <div className={style["container-input"]}>
+          <p>Vrijednost:</p>
+          <input type="number" min={1} {...register("vrijednost")} />
+        </div>
+        <div className={style["container-input"]}>
+          <p>Opis:</p>
+          <textarea
+            rows={5}
+            cols={30}
+            placeholder="Opis"
+            {...register("opis")}
+          />
+        </div>
+        <div className={style["container-input"]}>
+          <button type="submite">Spremi</button>
+        </div>
       </form>
     </>
   );
