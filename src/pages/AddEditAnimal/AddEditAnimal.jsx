@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import style from "./AddEditAnimal.module.css";
+import style from "../../style/Form.module.css";
 import { useForm } from "react-hook-form";
 import * as azilDataAPI from "../../api/azilData";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
@@ -46,73 +46,108 @@ function AddEditAnimal() {
   const onSubmit = async (data) => {
     if (isEditing) {
       await azilDataAPI.editAnimals(id, data);
-      window.alert("Uspješno ste uredili informacije životinje");
+      window.alert("Uspješno ste uredili informacije životinje.");
     } else {
       await azilDataAPI.createAnimal(data);
-      window.alert("Uspješno ste unjeli novu životinju");
+      window.alert("Uspješno ste unjeli novu životinju.");
     }
     navigate("/zivotinje");
   };
 
   return (
     <>
-      <form className={style["animal-form"]} onSubmit={handleSubmit(onSubmit)}>
+      <form className={style["form"]} onSubmit={handleSubmit(onSubmit)}>
         {isEditing ? <h1>Editiranje Životinje</h1> : <h1>Unos Životinje</h1>}
-        <input
-          type="text"
-          placeholder="Ime"
-          {...register("ime", {
-            required: true,
-          })}
-        />
-        {errors.ime?.type === "required" && <span>Ime je obavezan.</span>}
-        <div className={style["radio-inputs"]}>
-          <div className={style["radio-input"]}>
-            <input type="radio" value="pas" {...register("vrsta")} />
-            <label>Pas</label>
-          </div>
-          <div className={style["radio-input"]}>
-            <input type="radio" value="mačka" {...register("vrsta")} />
-            <label>Mačka</label>
-          </div>
-          <div className={style["radio-input"]}>
-            <input type="radio" value="ostalo" {...register("vrsta")} />
-            <label>Ostalo</label>
+        <div className={style["container-input"]}>
+          <p>Ime:</p>
+          <input
+            type="text"
+            placeholder="Ime"
+            {...register("ime", {
+              required: true,
+            })}
+          />
+          {errors.ime?.type === "required" ? (
+            <span>Ime je obvezno.</span>
+          ) : (
+            <span>&nbsp;</span>
+          )}
+        </div>
+        <div className={style["container-input"]}>
+          <p>Vrsta:</p>
+          <div className={style["radio-inputs"]}>
+            <div className={style["radio-input"]}>
+              <input type="radio" value="pas" {...register("vrsta")} />
+              <label>Pas</label>
+            </div>
+            <div className={style["radio-input"]}>
+              <input type="radio" value="mačka" {...register("vrsta")} />
+              <label>Mačka</label>
+            </div>
+            <div className={style["radio-input"]}>
+              <input type="radio" value="ostalo" {...register("vrsta")} />
+              <label>Ostalo</label>
+            </div>
           </div>
         </div>
-        <input type="number" min={1} {...register("godine")} />
-        <div className={style["checkbox-input"]}>
-          <input type="checkbox" {...register("cip")} />
-          <label>Čipiran</label>
+        <div className={style["container-input"]}>
+          <p>Godine:</p>
+          <input type="number" min={1} {...register("godine")} />
         </div>
-        <input
-          type="date"
-          max={formattedDate}
-          {...register("pregled", {
-            required: true,
-          })}
-        />
-        {errors.pregled?.type === "required" && (
-          <span>Datum pregleda je obavezan.</span>
-        )}
+        <div className={style["container-input"]}>
+          <div className={style["checkbox-input"]}>
+            <input type="checkbox" {...register("cip")} />
+            <label>Čipiran</label>
+          </div>
+        </div>
+        <div className={style["container-input"]}>
+          <p>Pregled:</p>
+          <input
+            type="date"
+            max={formattedDate}
+            {...register("pregled", {
+              required: true,
+            })}
+          />
+          {errors.pregled?.type === "required" ? (
+            <span>Datum pregleda je obvezan.</span>
+          ) : (
+            <span>&nbsp;</span>
+          )}
+        </div>
         {isEditing && (
           <div className={style["checkbox-input"]}>
             <input type="checkbox" {...register("udomljen")} />
             <label>Udomljen</label>
           </div>
         )}
-        <input
-          type="text"
-          placeholder="URL slike"
-          {...register("slika", {
-            required: true,
-          })}
-        />
-        {errors.slika?.type === "required" && (
-          <span>URL slike je obavezan.</span>
-        )}
-        <textarea rows={5} cols={30} placeholder="Opis" {...register("opis")} />
-        <button type="submite">Spremi</button>
+        <div className={style["container-input"]}>
+          <p>Slika (URL):</p>
+          <input
+            type="text"
+            placeholder="URL slike"
+            {...register("slika", {
+              required: true,
+            })}
+          />
+          {errors.slika?.type === "required" ? (
+            <span>URL slike je obvezan.</span>
+          ) : (
+            <span>&nbsp;</span>
+          )}
+        </div>
+        <div className={style["container-input"]}>
+          <p>Opis:</p>
+          <textarea
+            rows={5}
+            cols={30}
+            placeholder="Opis"
+            {...register("opis")}
+          />
+        </div>
+        <div className={style["container-input"]}>
+          <button type="submite">Spremi</button>
+        </div>
       </form>
     </>
   );
