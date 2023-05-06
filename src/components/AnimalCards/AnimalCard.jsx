@@ -28,7 +28,10 @@ function AnimalCard({ animals, load }) {
               ? "Udomljen/udomljena"
               : "NIJE udomljen/udomljena"}
           </p>
+          <p>Godine: {animals.godine}</p>
+          <p>Pregled: {animals.pregled}</p>
           <p>Opis: {animals.opis}</p>
+          {animals.udomljen && <h3>UDOMLJEN</h3>}
           <div className={style["buttons"]}>
             {!animals.udomljen && <button onClick={() => changeAdoption(animals.id)}>Udomi</button>}
             {admin && <Link to={`/editiranjeZivotinja/${animals.id}`} state={{data: animals}}><button>Uredi</button></Link>}
