@@ -95,6 +95,12 @@ function AddEditAnimal() {
         {errors.pregled?.type === "required" && (
           <span>Datum pregleda je obavezan.</span>
         )}
+        {isEditing && (
+          <div className={style["checkbox-input"]}>
+            <input type="checkbox" {...register("udomljen")} />
+            <label>Udomljen</label>
+          </div>
+        )}
         <input
           type="text"
           placeholder="URL slike"
