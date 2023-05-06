@@ -16,7 +16,7 @@ export const createDonation = (data) => axios.post("/donacije", data);
 
 export const getAllAnimals = () => axios.get("/zivotinje");
 
-export const updateAnimals = (id, adopted) => axios.patch(`/zivotinje/${id}`, {udomljen: adopted ,});
+export const updateAnimals = (id) => axios.patch(`/zivotinje/${id}`, {udomljen: true ,});
 
 export const editAnimals = (id, data) => axios.put(`/zivotinje/${id}`, data);
 
