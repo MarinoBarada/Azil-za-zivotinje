@@ -116,9 +116,11 @@ function AddEditAnimal() {
           )}
         </div>
         {isEditing && (
-          <div className={style["checkbox-input"]}>
-            <input type="checkbox" {...register("udomljen")} />
-            <label>Udomljen</label>
+          <div className={style["container-input"]}>
+            <div className={style["checkbox-input"]}>
+              <input type="checkbox" {...register("udomljen")} />
+              <label>Udomljen</label>
+            </div>
           </div>
         )}
         <div className={style["container-input"]}>
