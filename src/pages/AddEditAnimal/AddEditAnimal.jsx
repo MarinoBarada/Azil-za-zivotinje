@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import style from "./AddEditAnimal.module.css";
 import { useForm } from "react-hook-form";
 import * as azilDataAPI from "../../api/azilData";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 function AddEditAnimal() {
+  const { id } = useParams();
+  const loction = useLocation();
+  const [isEditing, setIsEditing] = useState(false);
+  const animal = loction.state?.data;
+
   const navigate = useNavigate();
   const today = new Date();
   const year = today.getFullYear();
@@ -13,6 +18,7 @@ function AddEditAnimal() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -24,21 +30,34 @@ function AddEditAnimal() {
     },
   });
 
+  useEffect(() => {
+    if (animal) {
+      reset(animal);
+      setIsEditing(true);
+    } else {
+      setIsEditing(false);
+    }
+  }, [animal, reset]);
+
   const formattedDate = `${year}-${month < 10 ? "0" : ""}${month}-${
     day < 10 ? "0" : ""
   }${day}`;
 
   const onSubmit = async (data) => {
-    await azilDataAPI.createAnimal(data);
-
-    window.alert("Uspješno ste unjeli novu životinju");
+    if (isEditing) {
+      await azilDataAPI.editAnimals(id, data);
+      window.alert("Uspješno ste uredili informacije životinje");
+    } else {
+      await azilDataAPI.createAnimal(data);
+      window.alert("Uspješno ste unjeli novu životinju");
+    }
     navigate("/zivotinje");
   };
 
   return (
     <>
       <form className={style["animal-form"]} onSubmit={handleSubmit(onSubmit)}>
-        <h1>Unos Životinje</h1>
+        {isEditing ? <h1>Editiranje Životinje</h1> : <h1>Unos Životinje</h1>}
         <input
           type="text"
           placeholder="Ime"

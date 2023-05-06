@@ -40,6 +40,7 @@ function App() {
             {user && (
               <Route path="/unosZivotinja" element={<AddEditAnimal />} />
             )}
+            <Route path="/editiranjeZivotinja/:id" element={<AddEditAnimal />} />
           </Routes>
         </div>
         <Footer />

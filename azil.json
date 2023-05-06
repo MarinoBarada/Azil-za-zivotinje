@@ -132,8 +132,8 @@
       "opis": "Spor i u cvijetu mladosti.",
       "cip": false,
       "vrsta": "ostalo",
-      "udomljen": false,
-      "ime": "Krešo",
+      "udomljen": true,
+      "ime": "Krešimir",
       "pregled": "2017-12-07",
       "slika": "https://zoo.hr/wp-content/uploads/2019/10/%C4%8Dan%C4%8Dara-Testudo-hermanni-1620x1080-1620x1080.jpg",
       "id": 7
@@ -148,6 +148,17 @@
       "pregled": "2023-02-16",
       "slika": "https://d19p4plxg0u3gz.cloudfront.net/3f590ef2-8f1b-11ec-a4fd-0242ac120021/original.jpeg",
       "id": 8
+    },
+    {
+      "godine": "14",
+      "opis": "Voli biti u blatu a bijel..",
+      "cip": true,
+      "vrsta": "pas",
+      "udomljen": false,
+      "ime": "Flafy",
+      "pregled": "2023-05-02",
+      "slika": "https://lajger.com/wp-content/uploads/2020/11/sibirski-samojed.jpg",
+      "id": 9
     }
   ]
 }

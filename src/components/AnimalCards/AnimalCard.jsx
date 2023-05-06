@@ -3,6 +3,7 @@ import style from "./AnimalCard.module.css";
 import { useContext } from "react";
 import userTypeContext from "../../context/userTypeContext";
 import * as azilDataAPI from "../../api/azilData";
+import { Link } from "react-router-dom";
 
 function AnimalCard({ animals, load }) {
   const admin = useContext(userTypeContext);
@@ -30,7 +31,7 @@ function AnimalCard({ animals, load }) {
           <p>Opis: {animals.opis}</p>
           <div className={style["buttons"]}>
             {!animals.udomljen && <button onClick={() => changeAdoption(animals.id)}>Udomi</button>}
-            {admin && <button>Uredi</button>}
+            {admin && <Link to={`/editiranjeZivotinja/${animals.id}`} state={{data: animals}}><button>Uredi</button></Link>}
           </div>
         </div>
       </div>
