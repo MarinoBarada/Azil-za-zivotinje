@@ -62,6 +62,11 @@
     margin: 0 auto;
 }
 
+.modal {
+    width: 800px;
+    height: 700px;
+}
+
 @media screen and (max-width: 1000px) {
     .contact-container {
         flex-direction: column;

@@ -5,6 +5,7 @@ import style from "../../style/Form.module.css";
 import userTypeContext from "../../context/userTypeContext";
 import * as azilDataAPI from "../../api/azilData";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function AddNotification() {
   const navigate = useNavigate();
@@ -33,7 +34,11 @@ function AddNotification() {
     };
     await azilDataAPI.createNotification(toSend);
 
-    window.alert("Uspješno ste unjeli novu obavijest.");
+    Swal.fire({
+      icon: "success",
+      title: "Success",
+      text: "Uspješno ste unjeli novu obavijest",
+    });
     navigate("/obavijesti");
   };
 

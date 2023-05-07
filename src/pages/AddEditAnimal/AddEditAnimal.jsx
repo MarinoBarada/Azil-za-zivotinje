@@ -3,6 +3,7 @@ import style from "../../style/Form.module.css";
 import { useForm } from "react-hook-form";
 import * as azilDataAPI from "../../api/azilData";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function AddEditAnimal() {
   const { id } = useParams();
@@ -46,10 +47,18 @@ function AddEditAnimal() {
   const onSubmit = async (data) => {
     if (isEditing) {
       await azilDataAPI.editAnimals(id, data);
-      window.alert("Uspješno ste uredili informacije životinje.");
+      Swal.fire({
+        icon: "success",
+        title: "Success",
+        text: "Uspješno ste uredili informacije životinje",
+      });
     } else {
       await azilDataAPI.createAnimal(data);
-      window.alert("Uspješno ste unjeli novu životinju.");
+      Swal.fire({
+        icon: "success",
+        title: "Success",
+        text: "Uspješno ste unjeli novu životinju",
+      });
     }
     navigate("/zivotinje");
   };

@@ -4,6 +4,7 @@ import { useContext } from "react";
 import userTypeContext from "../../context/userTypeContext";
 import * as azilDataAPI from "../../api/azilData";
 import { FaTrash } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 function TableRow({ donation, load }) {
   const admin = useContext(userTypeContext);
@@ -14,9 +15,36 @@ function TableRow({ donation, load }) {
   };
 
   const deleteDonation = async (id) => {
-    if (window.confirm("Jeste li sigurni da želite izbrisati ovu donaciju?")) {
-      const response = await azilDataAPI.deleteDonation(id);
-      if (response.status === 200) load();
+    try {
+      const result = await Swal.fire({
+        title: "Jeste li sigurni da želite izbrisati ovu donaciju?",
+        text: "Ovo nećete moći vratiti!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Da, izbriši!",
+        preConfirm: async () => {
+          const response = await azilDataAPI.deleteDonation(id);
+          if (response.status === 200) {
+            return true;
+          } else {
+            throw new Error("There was an error deleting the notification.");
+          }
+        },
+      });
+
+      if (result.isConfirmed) {
+        Swal.fire("Izbrisano!", "Donacija je izbrisana.", "success");
+        load();
+      }
+    } catch (error) {
+      console.error(error);
+      Swal.fire(
+        "Greška",
+        "Došlo je do pogreške prilikom brisanja donacije.",
+        "error"
+      );
     }
   };
 

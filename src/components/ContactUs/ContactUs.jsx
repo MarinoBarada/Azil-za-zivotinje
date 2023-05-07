@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 function ContactUs() {
   const {
@@ -24,7 +25,11 @@ function ContactUs() {
       .then(
         (result) => {
           console.log(result.text);
-          window.alert("Mejl poslan");
+          Swal.fire({
+            icon: "success",
+            title: "Success",
+            text: "Uspješno ste poslali mejl",
+          });
         },
         (error) => {
           console.log(error.text);

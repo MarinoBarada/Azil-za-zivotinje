@@ -58,6 +58,13 @@
       "vrijednost": "7",
       "opis": "Mali miševi na baterije",
       "id": 4
+    },
+    {
+      "tip": "Hrana",
+      "kategorija": "nudi",
+      "vrijednost": "12",
+      "opis": "50 kg keksića",
+      "id": 5
     }
   ],
   "zivotinje": [
@@ -99,7 +106,7 @@
       "opis": "Rex vas neće drukati za drogu ne brinite",
       "cip": true,
       "vrsta": "pas",
-      "udomljen": false,
+      "udomljen": true,
       "ime": "Rex",
       "pregled": "2023-04-30",
       "slika": "https://zoona.hr/wp-content/uploads/2019/12/99111300_s-1.jpg",
@@ -154,7 +161,7 @@
       "opis": "Voli biti u blatu a bijel.",
       "cip": true,
       "vrsta": "pas",
-      "udomljen": false,
+      "udomljen": true,
       "ime": "Flafy",
       "pregled": "2023-05-02",
       "slika": "https://lajger.com/wp-content/uploads/2020/11/sibirski-samojed.jpg",

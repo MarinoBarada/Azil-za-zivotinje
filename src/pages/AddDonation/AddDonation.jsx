@@ -5,6 +5,7 @@ import * as azilDataAPI from "../../api/azilData";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import userTypeContext from "../../context/userTypeContext";
+import Swal from "sweetalert2";
 
 function AddDonation() {
   const navigate = useNavigate();
@@ -24,7 +25,11 @@ function AddDonation() {
     };
     await azilDataAPI.createDonation(toSend);
 
-    window.alert("Uspješno ste unjeli novu donaciju.");
+    Swal.fire({
+      icon: "success",
+      title: "Success",
+      text: "Uspješno ste unjeli novu donaciju",
+    });
     navigate("/donacije");
   };
 
