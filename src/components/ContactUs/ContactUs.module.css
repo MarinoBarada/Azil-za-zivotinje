@@ -39,7 +39,11 @@
 
 .info-container p{
     margin: 0;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
 }
 
 .info-container p a{

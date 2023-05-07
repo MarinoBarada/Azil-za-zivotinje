@@ -11,7 +11,7 @@ function Footer() {
   return (
     <footer className={style["footer"]}>
       <div className={style["wrapper"]}>
-        <SocialIcons/>
+        <SocialIcons color="white"/>
         <ul className={style["links"]}>
             <CustomLink to="/" style={style}>O nama</CustomLink>
             <CustomLink to="/zivotinje" style={style}>Životinje</CustomLink>

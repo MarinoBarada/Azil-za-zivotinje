@@ -47,11 +47,17 @@
 }
 
 .container button{
-    background-color: red;
+    background-color: inherit;
+    border: 0;
     align-self: self-end;
     font-size: 2rem;
     padding: 0.3em 0.6em;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2em;
 }
 
 .important {

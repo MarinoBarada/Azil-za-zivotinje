@@ -69,6 +69,16 @@
     font-size: 2.5rem;
     padding: 0.25em 0.5em;
     cursor: pointer;
+    border-radius: 0.2em;
+}
+
+.options .delete {
+    background-color: #F5F5F5;
+    border: 0;
+}
+
+.options .delete:hover {
+    background-color: #F5F5F5;
 }
 
 .options button:hover{

@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import style from "./Navbar.module.css";
-import MenuIcon from "../../icons/MenuAlt4.svg"
-import CloseIcon from "../../icons/close.svg"
 import { useState, useContext } from "react";
 import CustomLink from "../CustomLink/CustomLink";
 import userTypeContext from "../../context/userTypeContext";
+import { FaBars } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 
 function Navbar({ action }) {
   const [active, setActive] = useState(false);
@@ -22,12 +22,22 @@ function Navbar({ action }) {
             AzilSplit
           </Link>
           <ul>
-            <CustomLink to="/" style={style}>O nama</CustomLink>
-            <CustomLink to="/zivotinje" style={style}>Životinje</CustomLink>
-            <CustomLink to="/donacije" style={style}>Donacije</CustomLink>
-            <CustomLink to="/obavijesti" style={style}>Obavijesti</CustomLink>
+            <CustomLink to="/" style={style}>
+              O nama
+            </CustomLink>
+            <CustomLink to="/zivotinje" style={style}>
+              Životinje
+            </CustomLink>
+            <CustomLink to="/donacije" style={style}>
+              Donacije
+            </CustomLink>
+            <CustomLink to="/obavijesti" style={style}>
+              Obavijesti
+            </CustomLink>
             {checked && (
-              <CustomLink to="/unosZivotinja" style={style}>Unos životinja</CustomLink>
+              <CustomLink to="/unosZivotinja" style={style}>
+                Unos životinja
+              </CustomLink>
             )}
             <label className={style["toggle"]}>
               <input
@@ -48,23 +58,45 @@ function Navbar({ action }) {
           <Link to="/" className={style["site-title"]}>
             AzilSplit
           </Link>
-          <div className={style["menu-icon"]}>
-            <img src={MenuIcon} alt="" onClick={handleClick} />
-          </div>
+          <FaBars
+            size="3.5rem"
+            color="white"
+            onClick={handleClick}
+            className={style["icon"]}
+          />
         </div>
       </nav>
 
-      <div className={active ? `${style["mobile-menu-container"]} ${style["active"]}` : style["mobile-menu-container"]}>
-        <div className={style["close-icon"]}>
-          <img src={CloseIcon} alt="" onClick={handleClick}/>
-        </div>
+      <div
+        className={
+          active
+            ? `${style["mobile-menu-container"]} ${style["active"]}`
+            : style["mobile-menu-container"]
+        }
+      >
+        <FaTimes
+          size="4rem"
+          color="white"
+          onClick={handleClick}
+          className={style["close-icon"]}
+        />
         <ul>
-          <CustomLink to="/" style={style} onClick={handleClick}>O nama</CustomLink>
-          <CustomLink to="/zivotinje" style={style} onClick={handleClick}>Životinje</CustomLink>
-          <CustomLink to="/donacije" style={style} onClick={handleClick}>Donacije</CustomLink>
-          <CustomLink to="/obavijesti" style={style} onClick={handleClick}>Obavijesti</CustomLink>
+          <CustomLink to="/" style={style} onClick={handleClick}>
+            O nama
+          </CustomLink>
+          <CustomLink to="/zivotinje" style={style} onClick={handleClick}>
+            Životinje
+          </CustomLink>
+          <CustomLink to="/donacije" style={style} onClick={handleClick}>
+            Donacije
+          </CustomLink>
+          <CustomLink to="/obavijesti" style={style} onClick={handleClick}>
+            Obavijesti
+          </CustomLink>
           {checked && (
-            <CustomLink to="/unosZivotinja" style={style} onClick={handleClick}>Unos životinja</CustomLink>
+            <CustomLink to="/unosZivotinja" style={style} onClick={handleClick}>
+              Unos životinja
+            </CustomLink>
           )}
           <label className={style["toggle"]}>
             <input

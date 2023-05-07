@@ -5,6 +5,8 @@ import SocialIcons from "../SocialIcons/SocialIcons";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import emailjs from "@emailjs/browser";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
 
 function ContactUs() {
   const {
@@ -44,15 +46,16 @@ function ContactUs() {
           <div className={style["info-container"]}>
             <p>Split, Hrvatska</p>
             <p>
-              Telefon: <a href="tel:0919774088">+385-91-977-4088</a>
+              <FaPhoneAlt size="2rem" color="#333" />{" "}
+              <a href="tel:0919774088">+385-91-977-4088</a>
             </p>
             <p>
-              Email:{" "}
+              <FaEnvelope size="2rem" color="#333" /> {""}
               <a href="mailto:marino18barada@gmail.com">
                 marino18barada@gmail.com
               </a>
             </p>
-            <SocialIcons />
+            <SocialIcons color="#333" />
           </div>
           <form
             className={style["contact-form"]}

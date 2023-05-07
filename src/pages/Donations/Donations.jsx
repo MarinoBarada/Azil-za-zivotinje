@@ -3,6 +3,7 @@ import DonationsTables from "../../components/DonationsTables/DonationsTables";
 import * as azilDataAPI from "../../api/azilData";
 import style from "./Donations.module.css";
 import { Link } from "react-router-dom";
+import { FaPlusCircle } from "react-icons/fa";
 
 function Donations() {
   const [donations, setDonations] = useState([]);
@@ -23,7 +24,13 @@ function Donations() {
   return (
     <>
       <div className={style["container"]}>
-        <Link to={"/donacije/unosDonacije"} className={style["new-donation-button"]}>Nova Donacija</Link>
+        <Link
+          to={"/donacije/unosDonacije"}
+          className={style["new-donation-button"]}
+        >
+          <FaPlusCircle size="3rem" color="white" />
+          Nova Donacija
+        </Link>
       </div>
       <div className={style["donations-container"]}>
         <DonationsTables

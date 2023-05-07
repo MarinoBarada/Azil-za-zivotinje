@@ -4,6 +4,7 @@ import { useContext } from "react";
 import userTypeContext from "../../context/userTypeContext";
 import * as azilDataAPI from "../../api/azilData";
 import { Link } from "react-router-dom";
+import { FaRegEdit } from "react-icons/fa";
 
 function AnimalCard({ animals, load }) {
   const admin = useContext(userTypeContext);
@@ -14,9 +15,15 @@ function AnimalCard({ animals, load }) {
   };
 
   return (
-    <div className={animals.udomljen ? `${style["card"]} ${style["adopted"]}` : style["card"]}>
+    <div
+      className={
+        animals.udomljen
+          ? `${style["card"]} ${style["adopted"]}`
+          : style["card"]
+      }
+    >
       <div className={style["card-image"]}>
-        <img src={animals.slika} />
+        <img src={animals.slika} alt={animals.vrsta} />
       </div>
       <div className={style["card-info"]}>
         <h2>{animals.ime}</h2>
@@ -33,8 +40,20 @@ function AnimalCard({ animals, load }) {
           <p>Opis: {animals.opis}</p>
           {animals.udomljen && <h3>UDOMLJEN</h3>}
           <div className={style["buttons"]}>
-            {!animals.udomljen && <button onClick={() => changeAdoption(animals.id)}>Udomi</button>}
-            {admin && <Link to={`/editiranjeZivotinja/${animals.id}`} state={{data: animals}}><button>Uredi</button></Link>}
+            {!animals.udomljen && (
+              <button onClick={() => changeAdoption(animals.id)}>Udomi</button>
+            )}
+            {admin && (
+              <Link
+                to={`/editiranjeZivotinja/${animals.id}`}
+                state={{ data: animals }}
+              >
+                <button className={style["edit"]}>
+                  <FaRegEdit size="3rem" color="blue" />
+                  Uredi
+                </button>
+              </Link>
+            )}
           </div>
         </div>
       </div>

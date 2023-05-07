@@ -1,22 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import style from "./SocialIcons.module.css";
-import FacebookIcon from "../../icons/Facebook.svg";
-import InsatgramIcon from "../../icons/instagram.svg";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
-function SocialIcons() {
+function SocialIcons({color}) {
   return (
     <div className={style["social-icons"]}>
-      <Link to="/">
-        <div className={style["social-icon"]}>
-          <img src={FacebookIcon} alt="facebook" />
-        </div>
-      </Link>
-      <Link to="/">
-        <div className={style["social-icon"]}>
-          <img src={InsatgramIcon} alt="instagram" />
-        </div>
-      </Link>
+      <a href="https://www.facebook.com/" target="_blank">
+        <FaFacebookSquare size="5rem" color={color} />
+      </a>
+      <a href="https://www.linkedin.com/" target="_blank">
+        <FaLinkedin size="5rem" color={color} />
+      </a>
+      <a href="https://www.instagram.com/" target="_blank">
+        <FaInstagram size="5rem" color={color} />
+      </a>
     </div>
   );
 }

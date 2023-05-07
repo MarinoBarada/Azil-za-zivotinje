@@ -3,6 +3,7 @@ import style from "./Donations.module.css";
 import { useContext } from "react";
 import userTypeContext from "../../context/userTypeContext";
 import * as azilDataAPI from "../../api/azilData";
+import { FaTrash } from "react-icons/fa";
 
 function TableRow({ donation, load }) {
   const admin = useContext(userTypeContext);
@@ -30,7 +31,14 @@ function TableRow({ donation, load }) {
             <button onClick={() => changeCategory(donation.id, "donirano")}>
               Donirano
             </button>
-            <button onClick={() => deleteDonation(donation.id)}>Izbriši</button>
+            <button
+              className={style["delete"]}
+              onClick={() => deleteDonation(donation.id)}
+            >
+              <abbr title="Izbriši">
+                <FaTrash size="3rem" color="red" />
+              </abbr>
+            </button>
           </>
         ) : (
           donation.kategorija === "trazi" && (
@@ -51,7 +59,14 @@ function TableRow({ donation, load }) {
             <button onClick={() => changeCategory(donation.id, "trazi")}>
               Ponovi
             </button>
-            <button onClick={() => deleteDonation(donation.id)}>Izbriši</button>
+            <button
+              className={style["delete"]}
+              onClick={() => deleteDonation(donation.id)}
+            >
+              <abbr title="Izbriši">
+                <FaTrash size="3rem" color="red" />
+              </abbr>
+            </button>
           </>
         ) : (
           ""
