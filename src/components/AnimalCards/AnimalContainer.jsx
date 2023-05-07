@@ -15,20 +15,32 @@ function AnimalContainer({ animals, load }) {
   useEffect(() => {
     if (selectedValue == "Svi" && selectedSpecies == "Sve") {
       setFilterItems(animals);
-    } else if (selectedValue == "Svi" && selectedSpecies == "mačka" || selectedSpecies == "pas" || selectedSpecies == "ostalo") {
+    } else if (
+      (selectedValue == "Svi" && selectedSpecies == "mačka") ||
+      selectedSpecies == "pas" ||
+      selectedSpecies == "ostalo"
+    ) {
       setFilterItems(animals.filter((item) => item.vrsta == selectedSpecies));
     }
 
     if (selectedValue == "Udomljen" && selectedSpecies == "Sve") {
       setFilterItems(animals.filter((item) => item.udomljen == true));
     } else if (selectedValue == "Udomljen") {
-      setFilterItems(animals.filter((item) => (item.udomljen == true && item.vrsta == selectedSpecies)));
+      setFilterItems(
+        animals.filter(
+          (item) => item.udomljen == true && item.vrsta == selectedSpecies
+        )
+      );
     }
-    
+
     if (selectedValue == "Nije udomljen" && selectedSpecies == "Sve") {
       setFilterItems(animals.filter((item) => item.udomljen == false));
     } else if (selectedValue == "Nije udomljen") {
-      setFilterItems(animals.filter((item) => (item.udomljen == false && item.vrsta == selectedSpecies)));
+      setFilterItems(
+        animals.filter(
+          (item) => item.udomljen == false && item.vrsta == selectedSpecies
+        )
+      );
     }
   }, [animals, selectedValue, selectedSpecies]);
 
@@ -90,9 +102,19 @@ function AnimalContainer({ animals, load }) {
         </div>
       </div>
       <div className={style["card-container"]}>
-        {filterItems.map((animal) => (
-          <AnimalCard key={animal.id} animals={animal} load={load} />
-        ))}
+        {filterItems
+          .sort(function (a, b) {
+            if (a.ime < b.ime) {
+              return -1;
+            }
+            if (a.ime > b.ime) {
+              return 1;
+            }
+            return 0;
+          })
+          .map((animal) => (
+            <AnimalCard key={animal.id} animals={animal} load={load} />
+          ))}
       </div>
     </div>
   );
