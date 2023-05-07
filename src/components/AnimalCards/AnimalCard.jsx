@@ -14,7 +14,7 @@ function AnimalCard({ animals, load }) {
   };
 
   return (
-    <div className={style["card"]}>
+    <div className={animals.udomljen ? `${style["card"]} ${style["adopted"]}` : style["card"]}>
       <div className={style["card-image"]}>
         <img src={animals.slika} />
       </div>

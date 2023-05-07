@@ -30,7 +30,7 @@
     padding: 0;
     text-align: center;
     font-size: 3rem;
-    color: red;
+    color: green;
     border-bottom: 1px solid #333;
 }
 
@@ -52,4 +52,14 @@
     font-size: 2rem;
     padding: 0.3em 0.6em;
     cursor: pointer;
+}
+
+.important {
+    border: 0.2em solid green;
+}
+
+@media screen and (max-width: 420px) {
+    .container h1{
+        font-size: 3rem;
+    }
 }

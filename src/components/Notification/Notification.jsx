@@ -5,12 +5,12 @@ import userTypeContext from "../../context/userTypeContext";
 function Notification({ note , handleDelete}) {
   const admin = useContext(userTypeContext);
   return (
-    <div className={style["container"]}>
+    <div className={note.vazno ? `${style["container"]} ${style["important"]}` : style["container"]}>
       {note.vazno && <h2>VAŽNO!</h2>}
       <h1>{note.naslov}</h1>
       <h3>{note.datum}</h3>
       <p>{note.tekst}</p>
-      {admin && <button onClick={() => handleDelete(note.id)}>DELETE</button>}
+      {admin && <button onClick={() => handleDelete(note.id)}>Izbriši</button>}
     </div>
   );
 }
