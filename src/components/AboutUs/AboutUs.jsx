@@ -14,9 +14,7 @@ function AboutUs() {
             životinja koja uđe kroz naša vrata dobije ljubav, brigu i pažnju
             koju zaslužuje. Naš tim posvećenog osoblja i volontera strastveni su
             za dobrobit životinja i predani su pronalaženju zauvijek domova za
-            sve naše krznene prijatelje. U našem skloništu nastojimo stvoriti
-            pozitivno i poticajno okruženje u kojem životinje mogu napredovati i
-            gdje ljudi mogu doći pronaći svog savršenog suputnika.
+            sve naše krznene prijatelje.
           </p>
         </div>
         <div className={style["image-container"]}>
