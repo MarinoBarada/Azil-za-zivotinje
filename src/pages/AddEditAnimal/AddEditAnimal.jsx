@@ -110,7 +110,7 @@ function AddEditAnimal() {
           </div>
         </div>
         <div className={style["container-input"]}>
-          <p>Pregled:</p>
+          <p>Zadnji pregled u veterinara:</p>
           <input
             type="date"
             max={formattedDate}

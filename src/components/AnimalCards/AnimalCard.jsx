@@ -59,16 +59,18 @@ function AnimalCard({ animals, load }) {
         <h2>{animals.ime}</h2>
         <div className={style["more-info"]}>
           <p>Vrsta: {animals.vrsta}</p>
-          <p>
-            Status:{" "}
-            {animals.udomljen
-              ? "Udomljen/udomljena"
-              : "NIJE udomljen/udomljena"}
-          </p>
           <p>Godine: {animals.godine}</p>
           <p>Pregled: {animals.pregled}</p>
+          <p>Čipiran: {animals.cip ? "Da" : "Ne"}</p>
           <p>Opis: {animals.opis}</p>
-          {animals.udomljen && <h3>UDOMLJEN</h3>}
+          <p>
+            Status:{" "}
+            {animals.udomljen ? (
+              <h3>UDOMLJEN</h3>
+            ) : (
+              <p>NIJE udomljen/udomljena</p>
+            )}
+          </p>
           <div className={style["buttons"]}>
             {!animals.udomljen && (
               <button onClick={() => changeAdoption(animals.id)}>Udomi</button>

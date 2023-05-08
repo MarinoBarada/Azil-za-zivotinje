@@ -23,10 +23,10 @@
       "id": 3
     },
     {
-      "naslov": "Krešo je udomljen !!",
-      "datum": "2023-05-04",
-      "tekst": "Naš pas krešo već mjesecima radi probleme. Hvala bogu pa je udomljen\n",
-      "vazno": false,
+      "naslov": "Krešo je udomljen!",
+      "datum": "2023-05-08",
+      "tekst": "Nakon dugo vremena provedenog kod nas, s radošću vam javljamo da je napokon udomljen",
+      "vazno": true,
       "id": 4
     }
   ],
@@ -103,7 +103,7 @@
     },
     {
       "godine": "7",
-      "opis": "Rex vas neće drukati za drogu ne brinite",
+      "opis": "Vaš novi najbolji prijatelj",
       "cip": true,
       "vrsta": "pas",
       "udomljen": true,
@@ -114,7 +114,7 @@
     },
     {
       "godine": "7",
-      "opis": "Mimi voli da grebe.",
+      "opis": "Mimi voli grebat.",
       "cip": false,
       "vrsta": "mačka",
       "udomljen": false,
@@ -125,7 +125,7 @@
     },
     {
       "godine": "6",
-      "opis": "Mekana , slatka ali blago nadrkana.",
+      "opis": "Mekana i slatka, ali blago nadrkana.",
       "cip": true,
       "vrsta": "mačka",
       "udomljen": false,
@@ -166,6 +166,17 @@
       "pregled": "2023-05-02",
       "slika": "https://lajger.com/wp-content/uploads/2020/11/sibirski-samojed.jpg",
       "id": 9
+    },
+    {
+      "godine": 1,
+      "opis": "",
+      "cip": false,
+      "vrsta": "ostalo",
+      "udomljen": false,
+      "ime": "Rio",
+      "pregled": "2023-05-05",
+      "slika": "https://n1info.hr/wp-content/uploads/2021/10/06/1633518854-elizabeth-r-5WRBRUsTqPk-unsplash-1200x800.jpg",
+      "id": 10
     }
   ]
 }

@@ -6,6 +6,7 @@
     align-items: start;
     gap: 1.5em;
     overflow-x: auto;
+    padding-bottom: 1em;
 }
 
 .donation-category h1{
