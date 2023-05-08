@@ -58,7 +58,7 @@ function AddDonation() {
           )}
         </div>
         <div className={style["container-input"]}>
-          <p>Vrijednost (novčana):</p>
+          <p>Novčana vrijednost u eurima (€):</p>
           <input type="number" min={1} {...register("vrijednost")} />
         </div>
         <div className={style["container-input"]}>

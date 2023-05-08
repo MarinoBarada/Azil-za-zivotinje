@@ -153,8 +153,15 @@ function AddEditAnimal() {
             rows={5}
             cols={30}
             placeholder="Opis"
-            {...register("opis")}
+            {...register("opis", {
+              maxLength: 80,
+            })}
           />
+          {errors.opis?.type === "maxLength" ? (
+            <span>Opis najviše treba sadržati 80 znakova.</span>
+          ) : (
+            <span>&nbsp;</span>
+          )}
         </div>
         <div className={style["container-input"]}>
           <button type="submite">Spremi</button>

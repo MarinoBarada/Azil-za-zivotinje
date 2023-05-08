@@ -12,6 +12,7 @@ import userTypeContext from "./context/userTypeContext";
 import axios from "axios";
 import AddNotification from "./pages/AddNotification/AddNotification";
 import AddDonation from "./pages/AddDonation/AddDonation";
+import NotFound from "./pages/NotFound/NotFound";
 
 axios.defaults.baseURL = "http://localhost:3001";
 axios.defaults.headers = {
@@ -41,6 +42,7 @@ function App() {
               <Route path="/unosZivotinja" element={<AddEditAnimal />} />
             )}
             <Route path="/editiranjeZivotinja/:id" element={<AddEditAnimal />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
         <Footer />
