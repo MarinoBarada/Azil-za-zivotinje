@@ -28,6 +28,13 @@
       "tekst": "Nakon dugo vremena provedenog kod nas, s radošću vam javljamo da je napokon udomljen",
       "vazno": true,
       "id": 4
+    },
+    {
+      "naslov": "Šetnja životinja",
+      "datum": "2023-05-09",
+      "tekst": "Svečano vas pozivam da 11.5.2023. godine dođete u naš azil te se zabavite u šetnji naših životinja.",
+      "vazno": false,
+      "id": 5
     }
   ],
   "donacije": [
@@ -65,6 +72,27 @@
       "vrijednost": "12",
       "opis": "50 kg keksića",
       "id": 5
+    },
+    {
+      "tip": "Vet-troskovi",
+      "kategorija": "donirano",
+      "vrijednost": "50",
+      "opis": "",
+      "id": 6
+    },
+    {
+      "tip": "Hrana",
+      "kategorija": "trazi",
+      "vrijednost": "25",
+      "opis": "10 kg sjemenki za papige.",
+      "id": 7
+    },
+    {
+      "tip": "Lijekovi",
+      "kategorija": "nudi",
+      "vrijednost": "20",
+      "opis": "Tablte protiv buha",
+      "id": 8
     }
   ],
   "zivotinje": [
@@ -86,13 +114,13 @@
       "slika": "https://www.zoocity.hr/media/blog/cache/800x_0/magefan_blog/Zapadnos_kotski_bijeli_terijer.jpg",
       "cip": true,
       "godine": 50,
-      "opis": "Više od običnog psa",
+      "opis": "Više od običnog psa.",
       "pregled": "2000-02-13",
-      "udomljen": true
+      "udomljen": false
     },
     {
       "godine": "21",
-      "opis": "Žućo je umiljata beba od 50 kg",
+      "opis": "Umiljata beba od 50 kg.",
       "cip": true,
       "vrsta": "pas",
       "udomljen": false,
@@ -103,7 +131,7 @@
     },
     {
       "godine": "7",
-      "opis": "Vaš novi najbolji prijatelj",
+      "opis": "Vaš novi najbolji prijatelj.",
       "cip": true,
       "vrsta": "pas",
       "udomljen": true,
@@ -125,7 +153,7 @@
     },
     {
       "godine": "6",
-      "opis": "Mekana i slatka, ali blago nadrkana.",
+      "opis": "Mekana i slatka, ali blago čangrizava.",
       "cip": true,
       "vrsta": "mačka",
       "udomljen": false,

@@ -14,7 +14,7 @@ function AddDonation() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({ defaultValues: { vrijednost: 1, opis: "" } });
+  } = useForm({ defaultValues: { opis: "" } });
 
   const onSubmit = async (data) => {
     const toSend = {
@@ -59,7 +59,18 @@ function AddDonation() {
         </div>
         <div className={style["container-input"]}>
           <p>Novčana vrijednost u eurima (€):</p>
-          <input type="number" min={1} {...register("vrijednost")} />
+          <input
+            type="number"
+            min={0.1}
+            {...register("vrijednost", {
+              required: true,
+            })}
+          />
+          {errors.vrijednost?.type === "required" ? (
+            <span>Vrijednost je obvezna.</span>
+          ) : (
+            <span>&nbsp;</span>
+          )}
         </div>
         <div className={style["container-input"]}>
           <p>Opis:</p>
