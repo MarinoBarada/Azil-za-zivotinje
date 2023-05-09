@@ -74,7 +74,8 @@ function ContactUs() {
                 {...register("name", {
                   required: true,
                   minLength: 2,
-                  pattern: /^[A-Z](?!\s)[a-z]*((\W)?[A-Z][a-z]+)*$/gm,
+                  pattern:
+                    /^[A-ZŠĐČĆŽ](?!\s)[a-zšđćčž]*((\W)?[A-ZŠĐČĆŽ][a-zšđćčž]+)*$/gm,
                 })}
               />
               {errors.name?.type === "required" && (
@@ -95,7 +96,7 @@ function ContactUs() {
                 {...register("mobile", {
                   required: true,
                   pattern:
-                    /(\+?( |-|\.)?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})/g,
+                    /(\+?\d{1,3}[- .]?)?(\d{2,3}[- ]?)?\d{3}[- .]?\d{3,4}/g,
                 })}
               />
               {errors.mobile?.type === "required" && (
@@ -103,7 +104,7 @@ function ContactUs() {
               )}
               {errors.mobile?.type === "pattern" && (
                 <span>
-                  Broj mobitela morao izgledati kao npr. +385-985-245-1730 ili
+                  Broj mobitela morao izgledati kao npr. +385-91-999-9999 ili
                   091 999 9999.
                 </span>
               )}
