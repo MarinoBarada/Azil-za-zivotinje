@@ -95,8 +95,7 @@ Ovo je stranice za općenite obavijesti o azilu ili informacije koje korisnici �
   - naslov obavijesti - obavezno, max 20 znakova
   - tekst obavijesti - min 10, max. 200 znakova
   - Opcija "važno" - true/false, ovo može samo admin postaviti
-  - Uloga admina ima mogućnost brisanja obavijesti
-Obavijesti koje imaju status "važno" imaju drugačiji stil oblikovanja
+- Uloga admina ima mogućnost brisanja obavijesti. Obavijesti koje imaju status "važno" imaju drugačiji stil oblikovanja
 
 ## Installation
 
