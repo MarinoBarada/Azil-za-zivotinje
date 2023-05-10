@@ -1,13 +1,16 @@
 # Azil za zivotinje
+[![Croatian](https://img.shields.io/badge/lang-Croatian-green.svg)](https://github.com/MarinoBarada/Azil-za-zivotinje/blob/master/README.md)
+[![English](https://img.shields.io/badge/lang-English-yellow.svg)](https://github.com/MarinoBarada/Azil-za-zivotinje/blob/master/README.en.md)
+
 
 Ovo je završni projekt za Edit Scool Junior Dev React js. 
 Cilj projekta je napraviti aplikaciju koja će predstavljati stranicu azila za životinje. Aplikacija se sastojati od nekoliko pod-stranica
 
-- Opći podaci
-- Popis životinja
-- Unos novih životinja
-- Donacije
-- Obavijest
+- [Opći podaci](#opći-podaci)
+- [Popis životinja](#popis-životinja)
+- [Unos novih životinja](#unos-novih-životinja)
+- [Donacije](#donacije)
+- [Obavijest](#obavijesti)
 
 ## Navigacija
 
@@ -19,7 +22,7 @@ Korištena je  biblioteka "json-server"
 
 ## Uloga korisnika
 
-Aplikacija je zamišljena na način da sadrži različite funkcionalnosti ovisno o ulozi korisnika. Potrebno je implementirati dvije uloge - "admin" i "korisnik". To je implementirano pomoću jednostavnog "checkbox" elementa prikazanog u navigaciji stranice te "useContext" hook-a.
+Aplikacija je zamišljena na način da sadrži različite funkcionalnosti ovisno o ulozi korisnika. Implementirane su dvije uloge - "admin" i "korisnik". To je implementirano pomoću jednostavnog "checkbox" elementa prikazanog u navigaciji stranice te "useContext" hook-a
 
 ## Opći podaci
 
@@ -33,7 +36,7 @@ Ova stranica je jednaka za obje uloge i sadrži opće podatke o azilu - ime, adr
 
 ## Popis životinja
 
-Ova stranica prikazuje sve životinje koje se trenutno nalaze u azilu. Korisnici mogu filtrirati prikaz te mogu odabrati životinju za udomljavanje. Administrator može uređivati (mijenjati) podatke o već postojećim životinjama.
+Ova stranica prikazuje sve životinje koje se trenutno nalaze u azilu. Korisnici mogu filtrirati prikaz , mogu odabrati životinju za udomljavanje i pretraživati je po imenu. Administrator može uređivati (mijenjati) podatke o već postojećim životinjama
 
 ### Popis funkcionalnosti:
 
@@ -41,7 +44,7 @@ Ova stranica prikazuje sve životinje koje se trenutno nalaze u azilu. Korisnici
 
 - Filtriranje životinja po vrsti i po statusu udomljavanja
 
-- Opcija "Udomi životinju" - pritiskom na ovu tipku mijenja se status "udomljen" na "true" i kartica sa prikazom životinje mijenja izgled.
+- Opcija "Udomi" - pritiskom na ovu tipku mijenja se status "udomljen" na "true" i kartica sa prikazom životinje mijenja izgled
 
 - Opcija "Uredi" - vidljiva samo ako je uključena uloga "admin". Pritiskom na tipku "uredi" mijenja se izgled komponente i moguće je mijenjati podatke odabrane životinje. Također je moguće promijeniti status udomljavanja
 
@@ -51,15 +54,15 @@ Ova stranica služi za unos podataka novih životinja i vidljiva je samo adminis
 
 - Ime životinje (ne smije biti prazno)
 - Vrsta životinje (select opcija sa nekoliko predefiniranih vrijednosti - mačka/pas/…)
-- Godine životinja - ne smije biti prazno
+- Godine životinja (ne smije biti prazno)
 - Udomljen - true/false (ovo je na početku automatski "false" i ne unosi se)
-- Slika (samo URL do slike)
+- Slika (samo URL od slike)
 - Čip (true/false)
-- Zadnji pregled (datum)
+- Zadnji pregled kod veterinara (datum)
 
 ## Donacije
 
-Ova stranica služi za dvije svrhe - administratori mogu postavljati upite za donacije koje su im potrebne i prihvaćati ponuđene donacije od korisnika, dok korisnici mogu odabrati opciju slanja ponude ili ispunjenja objavljene donacije.
+Ova stranica služi za dvije svrhe - administratori mogu postavljati upite za donacije koje su im potrebne i prihvaćati ponuđene donacije od korisnika, dok korisnici mogu odabrati opciju slanja ponude ili ispunjenja objavljene donacije
 
 ### Popis funkcionalnosti:
 
@@ -70,7 +73,7 @@ Na stranici se odvojeno prikazuju tri kategorije donacija
 
 ### Uloga administratora:
 
-- vidljiva je opcija "nova donacija" pomoću koje može dodati na popis "tražimo" novi zahtjev za donacije. Svaka donacija ima:
+- Vidljiva je opcija "nova donacija" pomoću koje može dodati na popis "tražimo" novi zahtjev za donacije. Svaka donacija ima:
   - tip (hrana/lijekovi/igračke/vet. troškovi) - obavezno
   - iznos (vrijednost donacije) - obavezno
   - opis - kratki opis ili link na proizvod - neobavezno
@@ -81,17 +84,17 @@ Na stranici se odvojeno prikazuju tri kategorije donacija
 ### Uloga korisnika:
 
 - Za svaku donaciju u popisu "tražimo" ima opciju "doniraj" - mijenja status donacije u "donirano" i premješta u odgovarajući popis
-- Vidljiva je opcija "nova donacija" koja radi isto kao i kod amina samo se dodaje na drugi popis ("nudi se")
+- Vidljiva je opcija "nova donacija" koja radi isto kao i kod admina samo se dodaje na drugi popis ("nudi se")
 
 
 ## Obavijesti
 
-Ovo je stranice za općenite obavijesti o azilu ili informacije koje korisnici žele podijeliti sa drugima.
+Ovo je stranice za općenite obavijesti o azilu ili informacije koje korisnici žele podijeliti sa drugima
 
 ### Popis funkcionalnosti:
 
-- Prikaz obavijesti koje su sortirane po vremenu dodavanja (od najnovije prema starijima)
-- Na stranici treba postojati opcija "Nova obavijest" koja će prikazati formu za unos sa dva polja:
+- Prikaz obavijesti koje su sortirane po vremenu dodavanja (od naj novije prema starijima)
+- Na stranici postojati opcija "Nova obavijest" koja će prikazati formu za unos sa dva polja:
   - naslov obavijesti - obavezno, max 20 znakova
   - tekst obavijesti - min 10, max. 200 znakova
   - Opcija "važno" - true/false, ovo može samo admin postaviti
@@ -99,7 +102,7 @@ Ovo je stranice za općenite obavijesti o azilu ili informacije koje korisnici �
 
 ## Installation
 
-Install [React router](https://reactrouter.com/en/main/start/tutorial) tutorial
+Install [React router](https://reactrouter.com/en/main/start/tutorial)
 
 ```bash
   npm i react-router-dom
@@ -117,7 +120,7 @@ Install [EmailJS](https://www.emailjs.com/docs/sdk/installation/)
   npm install @emailjs/browser --save
 ```
 
-Install json server
+Install [JSON server](https://www.npmjs.com/package/json-server?activeTab=readme)
 
 ```bash
   npm install -g json-server
@@ -169,6 +172,7 @@ Start the server
 
 Start the json server
 
+**REMARK!** : Run in cmd
 ```bash
   json-server --watch azil.json --port 3001
 ```

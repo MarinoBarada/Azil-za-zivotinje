@@ -66,9 +66,9 @@ function AnimalCard({ animals, load }) {
           <p>
             Status:{" "}
             {animals.udomljen ? (
-              <h3>UDOMLJEN</h3>
+              <span>UDOMLJEN</span>
             ) : (
-              <p>NIJE udomljen/udomljena</p>
+              "NIJE udomljen / udomljena"
             )}
           </p>
           <div className={style["buttons"]}>
