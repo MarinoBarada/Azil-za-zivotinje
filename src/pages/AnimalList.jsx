@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import AnimalContainer from "../components/AnimalCards/AnimalContainer";
 import * as azilDataAPI from "../api/azilData";
+import SearchName from "../components/SearchName/SearchName";
 
 function AnimalList() {
   const [animals, setAnimals] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   async function loadAnimalsData() {
     try {
@@ -19,9 +21,21 @@ function AnimalList() {
   }, []);
 
   return (
-    <div className="animal">
-      <AnimalContainer animals={animals} load={loadAnimalsData}/>
-    </div>
+    <>
+      <SearchName  action={setSearchTerm}/>
+      <AnimalContainer
+        animals={animals.filter((animal) => {
+          if (searchTerm == "") {
+            return animal;
+          } else if (
+            animal.ime.toLowerCase().includes(searchTerm.toLowerCase())
+          ) {
+            return animal;
+          }
+        })}
+        load={loadAnimalsData}
+      />
+    </>
   );
 }
 
