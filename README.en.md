@@ -2,7 +2,7 @@
 [![Croatian](https://img.shields.io/badge/lang-Croatian-green.svg)](https://github.com/MarinoBarada/Azil-za-zivotinje/blob/master/README.md)
 [![English](https://img.shields.io/badge/lang-English-yellow.svg)](https://github.com/MarinoBarada/Azil-za-zivotinje/blob/master/README.en.md)
 
-This is the final project for Edit Scool Junior Dev React js. The goal of the project is to create an application that will represent the site of the animal shelter. The application consists of several sub-pages:
+This is the final project for  Edit Code School, Junior Dev React JS. The goal of the project is to create an application that will represent the site of the animal shelter. The application consists of several sub-pages:
 
 - [General Information](#general-information)
 - [List of animals](#list-of-animals)
