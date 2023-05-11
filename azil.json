@@ -93,6 +93,20 @@
       "vrijednost": "20",
       "opis": "Tablte protiv buha",
       "id": 8
+    },
+    {
+      "tip": "Hrana",
+      "kategorija": "donirano",
+      "vrijednost": "30",
+      "opis": "Suha hrana za mačke 5 kg",
+      "id": 9
+    },
+    {
+      "tip": "Ostalo",
+      "kategorija": "trazi",
+      "vrijednost": "25",
+      "opis": "Prijenosni kavez za mačke",
+      "id": 10
     }
   ],
   "zivotinje": [
@@ -156,7 +170,7 @@
       "opis": "Mekana i slatka, ali blago čangrizava.",
       "cip": true,
       "vrsta": "mačka",
-      "udomljen": false,
+      "udomljen": true,
       "ime": "Perina",
       "pregled": "2022-06-15",
       "slika": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpoBeKqby9XC1oFpU-8MMBxLyAtDeN1OUS_A&usqp=CAU",

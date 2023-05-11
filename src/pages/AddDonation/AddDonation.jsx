@@ -61,7 +61,7 @@ function AddDonation() {
           <p>Novčana vrijednost u eurima (€):</p>
           <input
             type="number"
-            min={0.1}
+            min={1}
             {...register("vrijednost", {
               required: true,
             })}
