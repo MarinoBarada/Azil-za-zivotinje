@@ -3,7 +3,7 @@
 [![English](https://img.shields.io/badge/lang-English-yellow.svg)](https://github.com/MarinoBarada/Azil-za-zivotinje/blob/master/README.en.md)
 
 
-Ovo je završni projekt za Edit Scool Junior Dev React js. 
+Ovo je završni projekt za Edit Code School, Junior Dev React JS. 
 Cilj projekta je napraviti aplikaciju koja će predstavljati stranicu azila za životinje. Aplikacija se sastojati od nekoliko pod-stranica
 
 - [Opći podaci](#opći-podaci)
