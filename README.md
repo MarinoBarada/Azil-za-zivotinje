@@ -4,7 +4,7 @@
 
 
 Ovo je završni projekt za Edit Code School, Junior Dev React JS. 
-Cilj projekta je napraviti aplikaciju koja će predstavljati stranicu azila za životinje. Aplikacija se sastojati od nekoliko pod-stranica
+Cilj projekta je napraviti aplikaciju koja će predstavljati stranicu azila za životinje. Aplikacija se sastoji od nekoliko pod-stranica
 
 - [Opći podaci](#opći-podaci)
 - [Popis životinja](#popis-životinja)

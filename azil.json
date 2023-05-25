@@ -89,17 +89,10 @@
     },
     {
       "tip": "Lijekovi",
-      "kategorija": "nudi",
+      "kategorija": "trazi",
       "vrijednost": "20",
       "opis": "Tablte protiv buha",
       "id": 8
-    },
-    {
-      "tip": "Hrana",
-      "kategorija": "donirano",
-      "vrijednost": "30",
-      "opis": "Suha hrana za mačke 5 kg",
-      "id": 9
     },
     {
       "tip": "Ostalo",

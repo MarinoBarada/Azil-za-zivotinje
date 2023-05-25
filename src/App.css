@@ -14,8 +14,8 @@ body {
   min-height: calc(100vh - 25.3em);
 }
 
-.swal2-popup {
-  font-size: 2rem !important;
+div.swal2-popup {
+  font-size: 2rem ;
 }
 
 @media screen and (max-width: 1340px){
